@@ -69,3 +69,7 @@ public class GreetingWebClient {
   }
 }
 ------------------------------------------------------------------------------
+exchange() method will immediately return a Mono<ClientResponse>, which will eventually represent the response from the server.
+flatMap() call here is used to extract and convert the body of the response – using the standard Jackson ObjectMapper functionality. 
+map() call is then used as we’d expect, to convert one value into another one.
+Note: flatMap() call will not execute until the HTTP Response comes back, and the likewise the map() handler will not execute until the JSON has been parsed into a Map object.
