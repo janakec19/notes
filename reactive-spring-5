@@ -30,5 +30,7 @@ What and Why Reactive Programming:
  Reactive Flux and Mono
  Mono<T> is a stream of at most 1 value.
  Flux<T> is a stream of potentially infinite values.
- need to check on block() ,blockFirst() , blockLast() ,subscribe() ?
+ block() ,blockFirst() , blockLast() ,subscribe() ?
  
+ Enabling support for Reactive MongoDB Repositories within Spring Data is done using 
+  @EnableReactiveMongoRepositories annotation instead of the normal @EnableMongoRepositories.
